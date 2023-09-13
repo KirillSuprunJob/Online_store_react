@@ -13,6 +13,7 @@ body {
   max-width: 1080px;
   margin: 50px auto;
   
+  
   li {
     list-style-type: none;
     /* Убираем маркеры */
@@ -28,6 +29,8 @@ body {
 }
 
 header{
+    padding: 40px;
+
     .headerLeft{
 
       img{
@@ -36,7 +39,14 @@ header{
 
     }
 
-    
+    .headerRight{
+      margin: 0;
+      height: 100%;
+
+      ul{
+        height: 100%;
+      }
+    }
 
 
 }
