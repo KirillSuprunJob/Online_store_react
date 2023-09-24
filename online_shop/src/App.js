@@ -13,7 +13,7 @@ function App() {
           <img width={40} height={40} src="./img/logo1.png" /> 
           <div className="headerInfo"> 
             <h3 className="m-0 text-uppercase"> React Store</h3>
-            <p className="m-0">  The best things ever </p>
+            <p className="m-0 opacity-50">  The best things ever </p>
           </div>
         </div>
       
@@ -49,16 +49,236 @@ function App() {
         </div>  
       </header>
 
+      <hr/>
+
       <div className="content">
-        <h1> All products </h1>
+        <h1 > All products </h1>
         {/* ----------------- */}
 
-        <div> 
+        <div className="products d-flex flex-wrap justify-content-between"> 
+          <div className="card"> 
+            <img width="133" height="112" src="/img/products/1.jpg" alt="Product" />
+            
+            <h5 className="py-3"> Your gateway to limitless possibilities. Experience the future of storage  </h5>
+
+            <div className="d-flex justify-content-between align-items-center">
+              <div className="d-flex flex-column">
+
+                <span> Price:  </span>
+                <b> 6 999 grn. </b>
+
+              </div>
+
+              <button className="button"> <img width="11" height="11" src="/img/plus.svg" alt="Plus"/> </button>
+
+            </div>
           
-        
-        
-        
+          </div>
+
+          <div className="card"> 
+            <img width="133" height="112" src="/img/products/2.jpg" alt="Product" />
+            
+            <h5 className="py-3"> Your gateway to limitless possibilities. Experience the future of storage  </h5>
+
+            <div className="d-flex justify-content-between align-items-center">
+              <div className="d-flex flex-column">
+
+                <span> Price:  </span>
+                <b> 6 999 grn. </b>
+
+              </div>
+
+              <button className="button"> <img width="11" height="11" src="/img/plus.svg" alt="Plus"/> </button>
+
+            </div>
+          
+          </div>
+
+          <div className="card"> 
+            <img width="133" height="112" src="/img/products/3.jpg" alt="Product" />
+            
+            <h5 className="py-3"> Your gateway to limitless possibilities. Experience the future of storage  </h5>
+
+            <div className="d-flex justify-content-between align-items-center">
+              <div className="d-flex flex-column">
+
+                <span> Price:  </span>
+                <b> 6 999 grn. </b>
+
+              </div>
+
+              <button className="button"> <img width="11" height="11" src="/img/plus.svg" alt="Plus"/> </button>
+
+            </div>
+          
+          </div>
+
+          <div className="card"> 
+            <img width="133" height="112" src="/img/products/4.jpg" alt="Product" />
+            
+            <h5 className="py-3"> Your gateway to limitless possibilities. Experience the future of storage  </h5>
+
+            <div className="d-flex justify-content-between align-items-center">
+              <div className="d-flex flex-column">
+
+                <span> Price:  </span>
+                <b> 6 999 grn. </b>
+
+              </div>
+
+              <button className="button"> <img width="11" height="11" src="/img/plus.svg" alt="Plus"/> </button>
+
+            </div>
+          
+          </div>
+
+          <div className="card"> 
+            <img width="133" height="112" src="/img/products/1.jpg" alt="Product" />
+            
+            <h5 className="py-3"> Your gateway to limitless possibilities. Experience the future of storage  </h5>
+
+            <div className="d-flex justify-content-between align-items-center">
+              <div className="d-flex flex-column">
+
+                <span> Price:  </span>
+                <b> 6 999 grn. </b>
+
+              </div>
+
+              <button className="button"> <img width="11" height="11" src="/img/plus.svg" alt="Plus"/> </button>
+
+            </div>
+          
+          </div>
+
+          <div className="card"> 
+            <img width="133" height="112" src="/img/products/2.jpg" alt="Product" />
+            
+            <h5 className="py-3"> Your gateway to limitless possibilities. Experience the future of storage  </h5>
+
+            <div className="d-flex justify-content-between align-items-center">
+              <div className="d-flex flex-column">
+
+                <span> Price:  </span>
+                <b> 6 999 grn. </b>
+
+              </div>
+
+              <button className="button"> <img width="11" height="11" src="/img/plus.svg" alt="Plus"/> </button>
+
+            </div>
+          
+          </div>
+
+          <div className="card"> 
+            <img width="133" height="112" src="/img/products/3.jpg" alt="Product" />
+            
+            <h5 className="py-3"> Your gateway to limitless possibilities. Experience the future of storage  </h5>
+
+            <div className="d-flex justify-content-between align-items-center">
+              <div className="d-flex flex-column">
+
+                <span> Price:  </span>
+                <b> 6 999 grn. </b>
+
+              </div>
+
+              <button className="button"> <img width="11" height="11" src="/img/plus.svg" alt="Plus"/> </button>
+
+            </div>
+          
+          </div>
+
+          <div className="card"> 
+            <img width="133" height="112" src="/img/products/4.jpg" alt="Product" />
+            
+            <h5 className="py-3"> Your gateway to limitless possibilities. Experience the future of storage  </h5>
+
+            <div className="d-flex justify-content-between align-items-center">
+              <div className="d-flex flex-column">
+
+                <span> Price:  </span>
+                <b> 6 999 grn. </b>
+
+              </div>
+
+              <button className="button"> <img width="11" height="11" src="/img/plus.svg" alt="Plus"/> </button>
+
+            </div>
+          
+          </div>
+
+          <div className="card"> 
+            <img width="133" height="112" src="/img/products/2.jpg" alt="Product" />
+            
+            <h5 className="py-3"> Your gateway to limitless possibilities. Experience the future of storage  </h5>
+
+            <div className="d-flex justify-content-between align-items-center">
+              <div className="d-flex flex-column">
+
+                <span> Price:  </span>
+                <b> 6 999 grn. </b>
+
+              </div>
+              <button className="button"> <img width="11" height="11" src="/img/plus.svg" alt="Plus"/> </button>
+            </div>
+          
+          </div>
+          
+          <div className="card"> 
+            <img width="133" height="112" src="/img/products/4.jpg" alt="Product" />
+            
+            <h5 className="py-3"> Your gateway to limitless possibilities. Experience the future of storage  </h5>
+
+            <div className="d-flex justify-content-between align-items-center">
+              <div className="d-flex flex-column">
+
+                <span> Price:  </span>
+                <b> 6 999 grn. </b>
+
+              </div>
+              <button className="button"> <img width="11" height="11" src="/img/plus.svg" alt="Plus"/> </button>
+            </div>
+          
+          </div>
+          
+          <div className="card"> 
+            <img width="133" height="112" src="/img/products/3.jpg" alt="Product" />
+            
+            <h5 className="py-3"> Your gateway to limitless possibilities. Experience the future of storage  </h5>
+
+            <div className="d-flex justify-content-between align-items-center">
+              <div className="d-flex flex-column">
+
+                <span> Price:  </span>
+                <b> 6 999 grn. </b>
+
+              </div>
+              <button className="button"> <img width="11" height="11" src="/img/plus.svg" alt="Plus"/> </button>
+            </div>
+          
+          </div>
+          
+          <div className="card"> 
+            <img width="133" height="112" src="/img/products/1.jpg" alt="Product" />
+            
+            <h5 className="py-3"> Your gateway to limitless possibilities. Experience the future of storage  </h5>
+
+            <div className="d-flex justify-content-between align-items-center">
+              <div className="d-flex flex-column">
+
+                <span> Price:  </span>
+                <b> 6 999 grn. </b>
+
+              </div>
+              <button className="button"> <img width="11" height="11" src="/img/plus.svg" alt="Plus"/> </button>
+            </div>
+          
+          </div>
+          
         </div>
+
+        
       </div>
 
     </div>
