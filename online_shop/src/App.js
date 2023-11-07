@@ -10,7 +10,7 @@ function App() {
     <div className="wrapper">
       <header className="d-flex justify-content-between align-items-center"> 
         <div className="headerLeft d-flex align-items-center"> 
-          <img width={40} height={40} src="./img/logo1.png" /> 
+          <img width={40} height={40} src="./img/logo1.png" alt="icon"/> 
           <div className="headerInfo"> 
             <h3 className="m-0 text-uppercase"> React Store</h3>
             <p className="m-0 opacity-50">  The best things ever </p>
@@ -52,11 +52,21 @@ function App() {
       <hr/>
 
       <div className="content">
-        <h1 > All products </h1>
+        <div className="content_top d-flex flex-row align-items-center justify-content-between"> 
+          <h1 > All products </h1>
+          <div className="search-block d-flex"> 
+            <img src="/img/search.svg" alt="Search"/>
+            <input placeholder="Search... "
+                                            />
+          </div>
+        </div>
         {/* ----------------- */}
 
         <div className="products d-flex flex-wrap justify-content-between"> 
-          <div className="card"> 
+          <div className="card">
+            <div className="favorite"> 
+              <img width="40" height="40" src="/img/heart_unliked.svg" alt="unliked"  />
+            </div>
             <img width="133" height="112" src="/img/products/1.jpg" alt="Product" />
             
             <h5 className="py-3"> Your gateway to limitless possibilities. Experience the future of storage  </h5>
