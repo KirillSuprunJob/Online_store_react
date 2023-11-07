@@ -8,6 +8,25 @@ function App() {
 
   return (
     <div className="wrapper">
+      <div className="overlay">        
+        <div className="drawer">   
+          <h2> Cart </h2>
+
+          <div className="cartItem d-flex flex-row align-items-center justify-content-center">   
+            <img className="products_photo" width="70" height="70" src="/img/products/2.jpg" alt="product"/>
+
+            <div> 
+              <div className="before_remove"> Your gateway to limitless possibilities </div>
+              <b> 6 999 grn. </b>
+            </div>
+            
+            <img width="32" height="32" src="/img/button_remove.svg" alt="remove"/>
+          </div>
+        </div>
+      
+      </div>
+
+
       <header className="d-flex justify-content-between align-items-center"> 
         <div className="headerLeft d-flex align-items-center"> 
           <img width={40} height={40} src="./img/logo1.png" alt="icon"/> 
