@@ -144,43 +144,153 @@ div.content{
 }
 
 .overlay{
-  position: absolute;
+  position:fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.1);
   z-index: 1;
-}
-
-.drawer{
-position: absolute;
-width: 385px;
-right: 0;
-height: 100%;
-background: #FFFFFF;
-box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
-padding: 30px;
-
-}
-
-h2{
-  margin: 0;
-}
-
-.cartItem{
 
 
+  .drawer{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 420px;
+    right: 0;
+    height: 100%;
+    background: #FFFFFF;
+    box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+    padding: 30px;
 
-  .products_photo{
-    margin-right: 20px;
-  }
+    h2{
+      margin-bottom: 20px;
 
-  div + p{
-    margin-bottom: 0 !important;
-  }
+      img.removeBtn{
+        opacity: 0.5;
+        transition: opacity 0.2s ease-in-out;
   
-  .before_remove{
-    margin-right: 20px;
+        &:hover{
+          opacity: 1;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .cartItemsAll{
+      flex: 1;
+      overflow: auto;
+      margin-bottom: 40px;
+    }
+
+    .cartTotalBlock{
+
+
+      ul{
+        margin-bottom: 30px;
+
+        li{
+          display: flex;
+          align-items: flex-end;
+          margin-bottom: 20px;
+        
+
+          div{
+            flex: 1;
+            height: 1px;
+            border-bottom: 1px dashed #dfdfdf;
+            position: relative;
+            top: -5px;
+            margin: 0 7px;
+          }
+        }
+      }
+
+      .greenButton{
+        position: relative;
+        
+        &:hover{
+          img{
+            transform: translateX(5px);
+          }
+        }
+
+        img{
+          position: absolute;
+          right: 30px;
+          top: 22px;
+          transition: transform 0.2s ease-in-out;
+
+        }
+      }
+
   }
+
+  button{
+    width: 100%;
+    height: 55px;
+    border-radius: 18px;
+    background: #9DD458;
+    border: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background 0.2s ease-in-out;
+
+
+    &:hover{
+      background: lighten(#9DD458, 5%);
+    }
+
+    &:active{
+      background: darken(#9DD458, 5%);
+    }
+  }
+}
+
+  h2{
+    margin: 0;
+  }
+
+  .cartItem{
+    border: 1px solid #f3f3f3;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 10px 0px;
+    margin-top: 20px;
+
+
+    .cartItemImg{
+      margin-right: 20px;
+      height: 100px;
+      width: 100px;
+      background-size: contain;
+      background-position: 0 8px;
+      background-repeat: no-repeat;
+    }
+
+
+    
+    .beforeRemove{
+      margin-right: 15px;
+      margin-bottom: 5px;
+      font-size: 16px;
+    }
+
+    b{
+      font-size: 14px;
+    }
+
+    img.removeBtn{
+      opacity: 0.5;
+      transition: opacity 0.2s ease-in-out;
+
+      &:hover{
+        opacity: 1;
+        cursor: pointer;
+      }
+
+    }
+  } 
 }
