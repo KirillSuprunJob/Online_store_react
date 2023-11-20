@@ -285,6 +285,7 @@ div.content{
     img.removeBtn{
       opacity: 0.5;
       transition: opacity 0.2s ease-in-out;
+      margin-right: 10px;
 
       &:hover{
         opacity: 1;
