@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card() {
+function Card(props) {
 
 
     return (
@@ -8,15 +8,15 @@ function Card() {
             <div className="favorite"> 
               <img width="40" height="40" src="/img/heart_unliked.svg" alt="unliked"  />
             </div>
-            <img width="133" height="112" src="/img/products/1.jpg" alt="Product" />
+            <img width="133" height="112" src={props.imageUrl} alt="Product" />
             
-            <h5 className="py-3"> Your gateway to limitless possibilities. Experience the future of storage  </h5>
+            <h5 className="py-3"> {props.title}  </h5>
 
             <div className="d-flex justify-content-between align-items-center">
               <div className="d-flex flex-column">
 
                 <span> Price:  </span>
-                <b> 6 999 grn. </b>
+                <b> {props.price} grn. </b>
 
               </div>
 

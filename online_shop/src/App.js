@@ -2,194 +2,25 @@ import "./App.scss";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from './components/Card.jsx';
 import Header from "./components/Header.jsx";
+import Drawer from "./components/Drawer.jsx";
 
 function App() {
 
+  const arr = [
+    {name:  'Your gateway to limitless possibilities. Experience the future of storage', price: 6999}, 
+    {name:  'Explore limitless storage possibilities now', price: 8311},
+    {name:  'Unleash boundless storage innovation today', price: 12700},
+    {name:  'Embark on limitless storage solutions', price: 3500},
+  ]
 
-
-
+  console.log(arr)
 
 // ?? ------------------------------------------------------------------
   return (
     <div className="wrapper">
-      <div className="overlay" style={{display: 'none'}}>
-        <div className="drawer">   
-          <h2 className="d-flex justify-content-between align-items-center"> Shopping basket               <img className="removeBtn" width="32" height="32" src="/img/button_remove.svg" alt="remove"/> </h2>
 
-          <div className="cartItemsAll"> 
-            <div className="cartItem d-flex flex-row align-items-center justify-content-center">   
-              {/* <img className="products_photo" width="70" height="70" src="/img/products/2.jpg" alt="product"/> */}
-
-              <div  className="cartItemImg" style={{backgroundImage: 'url(/img/products/2.jpg)'}}>         </div>
-
-              <div className="d-flex flex-column "> 
-                <div className="beforeRemove"> Your gateway to limitless possibilities </div>
-                <b> 6 999 grn. </b>
-              </div>
-              
-              <img className="removeBtn" width="32" height="32" src="/img/button_remove.svg" alt="remove"/>
-            </div>
-            {/* --------------------------------------- */}
-            <div className="cartItem d-flex flex-row align-items-center justify-content-center">   
-              {/* <img className="products_photo" width="70" height="70" src="/img/products/2.jpg" alt="product"/> */}
-
-              <div  className="cartItemImg" style={{backgroundImage: 'url(/img/products/4.jpg)'}}>         </div>
-
-              <div className="d-flex flex-column "> 
-                <div className="beforeRemove"> Your gateway to limitless possibilities </div>
-                <b> 6 999 grn. </b>
-              </div>
-              
-              <img className="removeBtn" width="32" height="32" src="/img/button_remove.svg" alt="remove"/>
-            </div>
-             {/* --------------------------------------- */}
-             <div className="cartItem d-flex flex-row align-items-center justify-content-center">   
-              {/* <img className="products_photo" width="70" height="70" src="/img/products/2.jpg" alt="product"/> */}
-
-              <div  className="cartItemImg" style={{backgroundImage: 'url(/img/products/4.jpg)'}}>         </div>
-
-              <div className="d-flex flex-column "> 
-                <div className="beforeRemove"> Your gateway to limitless possibilities </div>
-                <b> 6 999 grn. </b>
-              </div>
-              
-              <img className="removeBtn" width="32" height="32" src="/img/button_remove.svg" alt="remove"/>
-            </div>
-             {/* --------------------------------------- */}
-             <div className="cartItem d-flex flex-row align-items-center justify-content-center">   
-              {/* <img className="products_photo" width="70" height="70" src="/img/products/2.jpg" alt="product"/> */}
-
-              <div  className="cartItemImg" style={{backgroundImage: 'url(/img/products/4.jpg)'}}>         </div>
-
-              <div className="d-flex flex-column "> 
-                <div className="beforeRemove"> Your gateway to limitless possibilities </div>
-                <b> 6 999 grn. </b>
-              </div>
-              
-              <img className="removeBtn" width="32" height="32" src="/img/button_remove.svg" alt="remove"/>
-            </div>
-             {/* --------------------------------------- */}
-             <div className="cartItem d-flex flex-row align-items-center justify-content-center">   
-              {/* <img className="products_photo" width="70" height="70" src="/img/products/2.jpg" alt="product"/> */}
-
-              <div  className="cartItemImg" style={{backgroundImage: 'url(/img/products/4.jpg)'}}>         </div>
-
-              <div className="d-flex flex-column "> 
-                <div className="beforeRemove"> Your gateway to limitless possibilities </div>
-                <b> 6 999 grn. </b>
-              </div>
-              
-              <img className="removeBtn" width="32" height="32" src="/img/button_remove.svg" alt="remove"/>
-            </div>
-             {/* --------------------------------------- */}
-             <div className="cartItem d-flex flex-row align-items-center justify-content-center">   
-              {/* <img className="products_photo" width="70" height="70" src="/img/products/2.jpg" alt="product"/> */}
-
-              <div  className="cartItemImg" style={{backgroundImage: 'url(/img/products/4.jpg)'}}>         </div>
-
-              <div className="d-flex flex-column "> 
-                <div className="beforeRemove"> Your gateway to limitless possibilities </div>
-                <b> 6 999 grn. </b>
-              </div>
-              
-              <img className="removeBtn" width="32" height="32" src="/img/button_remove.svg" alt="remove"/>
-            </div>
-             {/* --------------------------------------- */}
-             <div className="cartItem d-flex flex-row align-items-center justify-content-center">   
-              {/* <img className="products_photo" width="70" height="70" src="/img/products/2.jpg" alt="product"/> */}
-
-              <div  className="cartItemImg" style={{backgroundImage: 'url(/img/products/4.jpg)'}}>         </div>
-
-              <div className="d-flex flex-column "> 
-                <div className="beforeRemove"> Your gateway to limitless possibilities </div>
-                <b> 6 999 grn. </b>
-              </div>
-              
-              <img className="removeBtn" width="32" height="32" src="/img/button_remove.svg" alt="remove"/>
-            </div>
-             {/* --------------------------------------- */}
-             <div className="cartItem d-flex flex-row align-items-center justify-content-center">   
-              {/* <img className="products_photo" width="70" height="70" src="/img/products/2.jpg" alt="product"/> */}
-
-              <div  className="cartItemImg" style={{backgroundImage: 'url(/img/products/4.jpg)'}}>         </div>
-
-              <div className="d-flex flex-column "> 
-                <div className="beforeRemove"> Your gateway to limitless possibilities </div>
-                <b> 6 999 grn. </b>
-              </div>
-              
-              <img className="removeBtn" width="32" height="32" src="/img/button_remove.svg" alt="remove"/>
-            </div>
-             {/* --------------------------------------- */}
-             <div className="cartItem d-flex flex-row align-items-center justify-content-center">   
-              {/* <img className="products_photo" width="70" height="70" src="/img/products/2.jpg" alt="product"/> */}
-
-              <div  className="cartItemImg" style={{backgroundImage: 'url(/img/products/4.jpg)'}}>         </div>
-
-              <div className="d-flex flex-column "> 
-                <div className="beforeRemove"> Your gateway to limitless possibilities </div>
-                <b> 6 999 grn. </b>
-              </div>
-              
-              <img className="removeBtn" width="32" height="32" src="/img/button_remove.svg" alt="remove"/>
-            </div>
-             {/* --------------------------------------- */}
-             <div className="cartItem d-flex flex-row align-items-center justify-content-center">   
-              {/* <img className="products_photo" width="70" height="70" src="/img/products/2.jpg" alt="product"/> */}
-
-              <div  className="cartItemImg" style={{backgroundImage: 'url(/img/products/4.jpg)'}}>         </div>
-
-              <div className="d-flex flex-column "> 
-                <div className="beforeRemove"> Your gateway to limitless possibilities </div>
-                <b> 6 999 grn. </b>
-              </div>
-              
-              <img className="removeBtn" width="32" height="32" src="/img/button_remove.svg" alt="remove"/>
-            </div>
-             {/* --------------------------------------- */}
-             <div className="cartItem d-flex flex-row align-items-center justify-content-center">   
-              {/* <img className="products_photo" width="70" height="70" src="/img/products/2.jpg" alt="product"/> */}
-
-              <div  className="cartItemImg" style={{backgroundImage: 'url(/img/products/4.jpg)'}}>         </div>
-
-              <div className="d-flex flex-column "> 
-                <div className="beforeRemove"> Your gateway to limitless possibilities </div>
-                <b> 6 999 grn. </b>
-              </div>
-              
-              <img className="removeBtn" width="32" height="32" src="/img/button_remove.svg" alt="remove"/>
-            </div>
-             {/* --------------------------------------- */}
-             <div className="cartItem d-flex flex-row align-items-center justify-content-center">   
-              {/* <img className="products_photo" width="70" height="70" src="/img/products/2.jpg" alt="product"/> */}
-
-              <div  className="cartItemImg" style={{backgroundImage: 'url(/img/products/4.jpg)'}}>         </div>
-
-              <div className="d-flex flex-column "> 
-                <div className="beforeRemove"> Your gateway to limitless possibilities </div>
-                <b> 6 999 grn. </b>
-              </div>
-              
-              <img className="removeBtn" width="32" height="32" src="/img/button_remove.svg" alt="remove"/>
-            </div>
-            
-          </div>
-
-          <div className="cartTotalBlock"> 
-            <ul className="">
-              <li className=""> <span> Total:      </span>  <div>      </div>  <b> 13 998 grn. </b>  </li>
-
-              <li className=""> <span>  Tax 5%:     </span>  <div>      </div>  <b> 699,9 grn.    </b>  </li>
-            </ul>
-            {/* -------------- */}
-            <button className="greenButton"> Buy now <img src="/img/arrow_right.svg" alt="arrow right" />  </button>
-
-          </div>
-
-        </div>
+      <Drawer/>
       
-      </div>
-
       <Header/> 
     
       <hr/>
@@ -206,18 +37,29 @@ function App() {
           {/* ----------------- */}
 
         <div className="products d-flex flex-wrap justify-content-between"> 
-          <Card/> 
-          <Card/> 
-          <Card/> 
-          <Card/> 
-          <Card/> 
-          <Card/> 
-          <Card/> 
-          <Card/> 
-          <Card/> 
-          <Card/> 
-          <Card/> 
-          <Card/> 
+          {/* <Card 
+            title="Explore limitless storage possibilities now" 
+            price={6999} 
+            imageUrl="/img/products/1.jpg" 
+          /> */}
+
+          {arr.map((item, i) => (
+              <Card 
+                title={item.name} 
+                price={item.price} 
+                imageUrl={'/img/products/'+ (i+1) + '.jpg'} 
+              />
+            )
+          )}
+
+          {arr.map((item, i) => (
+              <Card 
+                title={item.name} 
+                price={item.price} 
+                imageUrl={'/img/products/'+ (4-i) + '.jpg'} 
+              />
+            )
+          )}
 
         </div>
 
