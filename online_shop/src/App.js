@@ -49,6 +49,8 @@ function App() {
                 title={item.name} 
                 price={item.price} 
                 imageUrl={'/img/products/'+ (i+1) + '.jpg'} 
+                onClickFavorite={() => console.log(`Click on heart. Add to favorite`) }
+                onClickPlus={() => console.log(`Click on Plus Button. Add to Cart`) } 
               />
             )
           )}

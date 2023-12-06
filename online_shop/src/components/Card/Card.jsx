@@ -5,14 +5,12 @@ console.log(styles)
 
 function Card(props) {
 
-  const onClickButton = () => {
-    alert(props.title);
-  }
+
 
 
     return (
         <div className={styles.card}>
-            <div className={styles.favorite}> 
+            <div onClick={props.onClickFavorite} className={styles.favorite}> 
               <img width="40" height="40" src="/img/heart_unliked.svg" alt="unliked"  />
             </div>
             <img width="133" height="112" src={props.imageUrl} alt="Product" />
@@ -27,7 +25,7 @@ function Card(props) {
 
               </div>
 
-              <button onClick={onClickButton} className={styles.button}> <img width="11" height="11" src="/img/plus.svg" alt="Plus"/> </button>
+              <button onClick={props.onClickPlus} className={styles.button}> <img width="11" height="11" src="/img/plus.svg" alt="Plus"/> </button>
 
             </div>
           
