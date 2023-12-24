@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.scss";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from './components/Card/Card.jsx';
@@ -5,6 +6,7 @@ import Header from "./components/Header.jsx";
 import Drawer from "./components/Drawer.jsx";
 
 function App() {
+
 
 
   const arr = [
@@ -38,29 +40,25 @@ function App() {
           {/* ----------------- */}
 
         <div className="products d-flex flex-wrap justify-content-between"> 
-          {/* <Card 
-            title="Explore limitless storage possibilities now" 
-            price={6999} 
-            imageUrl="/img/products/1.jpg" 
-          /> */}
 
           {arr.map((item, i) => (
               <Card 
                 title={item.name} 
                 price={item.price} 
-                imageUrl={'/img/products/'+ (i+1) + '.jpg'} 
+                imageUrl={item.imageUrl} 
                 onClickFavorite={() => console.log(`Click on heart. Add to favorite`) }
                 onClickPlus={() => console.log(`Click on Plus Button. Add to Cart`) } 
               />
             )
           )}
 
-          {arr.map((item, i) => (
+          {arr.reverse().map((item, i) => (
               <Card 
                 title={item.name} 
                 price={item.price} 
-                imageUrl={'/img/products/'+ (4-i) + '.jpg'
-                }  
+                imageUrl={item.imageUrl} 
+                onClickFavorite={() => console.log(`Click on heart. Add to favorite`) }
+                onClickPlus={() => console.log(`Click on Plus Button. Add to Cart`) } 
               />
             )
           )}

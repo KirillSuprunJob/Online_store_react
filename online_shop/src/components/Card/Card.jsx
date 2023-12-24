@@ -25,8 +25,7 @@ function Card(props) {
 
               </div>
 
-              <button onClick={props.onClickPlus} className={styles.button}> <img width="11" height="11" src="/img/plus.svg" alt="Plus"/> </button>
-
+                <img onClick={props.onClickPlus} width="11" height="11" src="/img/plus.svg" alt="Plus"/> 
             </div>
           
           </div>
