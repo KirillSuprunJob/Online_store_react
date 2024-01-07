@@ -7,6 +7,8 @@ import Drawer from "./components/Drawer.jsx";
 
 function App() {
 
+  const [cartOpened, setCartOpened]  = React.useState(false);
+  
 
 
   const arr = [
@@ -22,9 +24,9 @@ function App() {
   return (
     <div className="wrapper">
 
-      <Drawer/>
+      {cartOpened ? <Drawer onClose={() => setCartOpened(false)}/> : null }
       
-      <Header/> 
+      <Header onClickCart={() => setCartOpened(true)}/>
     
       <hr/>
 

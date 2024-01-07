@@ -3,9 +3,11 @@ import React, { Component } from 'react'
 export default class Drawer extends Component {
   render() {
     return (
-        <div className="overlay" style={{display: 'none'}}>
+        <div className="overlay">
             <div className="drawer">   
-                <h2 className="d-flex justify-content-between align-items-center"> Shopping basket               <img className="removeBtn" width="32" height="32" src="/img/button_remove.svg" alt="remove"/> </h2>
+                <h2 className="d-flex justify-content-between align-items-center"> Shopping basket               
+                    <img onClick={this.props.onClose} className="removeBtn" width="32" height="32" src="/img/button_remove.svg" alt="remove"/> 
+                </h2>
 
                 <div className="cartItemsAll"> 
                 <div className="cartItem d-flex flex-row align-items-center justify-content-center">   
