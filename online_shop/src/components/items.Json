@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Your gateway to limitless possibilities",
+    "price": 6999,
+    "imageUrl": "/img/products/1.jpg"
+  },
+  {
+    "name": "Explore limitless storage possibilities now",
+    "price": 8311,
+    "imageUrl": "/img/products/2.jpg"
+  },
+  {
+    "name": "Unleash boundless storage innovation today",
+    "price": 12700,
+    "imageUrl": "/img/products/3.jpg"
+  },
+  {
+    "name": "Embark on limitless storage solutions",
+    "price": 8999,
+    "imageUrl": "/img/products/4.jpg"
+  },
+  {
+    "name": "Your entrance to boundless opportunities",
+    "price": 16700,
+    "imageUrl": "/img/products/5.jpg"
+  },
+  {
+    "name": "Your portal to endless possibilities",
+    "price": 1900,
+    "imageUrl": "/img/products/6.jpg"
+  },
+  {
+    "name": "A passageway to infinite opportunities",
+    "price": 15300,
+    "imageUrl": "/img/products/7.jpg"
+  },
+  {
+    "name": "Your key to a world of boundless options",
+    "price": 4100,
+    "imageUrl": "/img/products/8.jpg"
+  },
+  {
+    "name": "Opening the door to unlimited possibilities",
+    "price": 9500,
+    "imageUrl": "/img/products/9.jpg"
+  },
+  {
+    "name": "Embarking on a journey to explore limitless horizons",
+    "price": 11100,
+    "imageUrl": "/img/products/10.jpg"
+  }
+]

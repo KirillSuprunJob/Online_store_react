@@ -6,19 +6,32 @@ import Header from "./components/Header.jsx";
 import Drawer from "./components/Drawer.jsx";
 
 function App() {
-
-  const [cartOpened, setCartOpened]  = React.useState(false);
   
+  const [cartOpened, setCartOpened]  = React.useState(false);
+  const [items, setItems] = React.useState([])
+
+  React.useEffect(() => {
+      fetch('https://659c316ad565feee2dac9ec0.mockapi.io/items').then((res) => { 
+          return res.json()
+        }
+      ).then(json => setItems(json))
+    }, []
+  )
+
+  console.log(items)
+
+  // const [] = React.useEffect()
 
 
-  const arr = [
-    {name:  'Your gateway to limitless possibilities. Experience the future of storage', price: 6999, imageUrl: '/img/products/1.jpg'}, 
-    {name:  'Explore limitless storage possibilities now', price: 8311, imageUrl: '/img/products/2.jpg'},
-    {name:  'Unleash boundless storage innovation today', price: 12700, imageUrl: '/img/products/3.jpg'},
-    {name:  'Embark on limitless storage solutions', price: 3500, imageUrl: '/img/products/4.jpg'},
-  ]
+ 
+  // const arr = [
+  //   {name:  'Your gateway to limitless possibilities', price: 6999, imageUrl: '/img/products/1.jpg'}, 
+  //   {name:  'Explore limitless storage possibilities now', price: 8311, imageUrl: '/img/products/2.jpg'},
+  //   {name:  'Unleash boundless storage innovation today', price: 12700, imageUrl: '/img/products/3.jpg'},
+  //   {name:  'Embark on limitless storage solutions', price: 3500, imageUrl: '/img/products/4.jpg'},
+  // ]
 
-  console.log(arr)
+  console.log(items)
 
 // ?? ------------------------------------------------------------------
   return (
@@ -43,7 +56,7 @@ function App() {
 
         <div className="products d-flex flex-wrap justify-content-between"> 
 
-          {arr.map((item, i) => (
+          {items.map((item, i) => (
               <Card 
                 title={item.name} 
                 price={item.price} 
@@ -54,7 +67,7 @@ function App() {
             )
           )}
 
-          {arr.reverse().map((item, i) => (
+          {items.reverse().map((item, i) => (
               <Card 
                 title={item.name} 
                 price={item.price} 
