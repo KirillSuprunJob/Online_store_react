@@ -8,7 +8,16 @@ import Drawer from "./components/Drawer.jsx";
 function App() {
   
   const [cartOpened, setCartOpened]  = React.useState(false);
-  const [items, setItems] = React.useState([])
+  const [cartItems, setCartItems] = React.useState([]);
+  const [items, setItems] = React.useState([]);
+
+
+
+  const onAddToCart = (obj) => {
+    setCartItems(prev => [...prev, obj]);
+    console.log('obj',cartItems);
+  };
+
 
   React.useEffect(() => {
       fetch('https://659c316ad565feee2dac9ec0.mockapi.io/items').then((res) => { 
@@ -16,9 +25,9 @@ function App() {
         }
       ).then(json => setItems(json))
     }, []
-  )
+  );
 
-  console.log(items)
+  
 
   // const [] = React.useEffect()
 
@@ -31,13 +40,11 @@ function App() {
   //   {name:  'Embark on limitless storage solutions', price: 3500, imageUrl: '/img/products/4.jpg'},
   // ]
 
-  console.log(items)
-
 // ?? ------------------------------------------------------------------
   return (
     <div className="wrapper">
 
-      {cartOpened ? <Drawer onClose={() => setCartOpened(false)}/> : null }
+      {cartOpened ? <Drawer items={cartItems} onClose={() => setCartOpened(false)}/> : null }
       
       <Header onClickCart={() => setCartOpened(true)}/>
     
@@ -62,21 +69,21 @@ function App() {
                 price={item.price} 
                 imageUrl={item.imageUrl} 
                 onClickFavorite={() => console.log(`Click on heart. Add to favorite`) }
-                onClickPlus={() => console.log(`Click on Plus Button. Add to Cart`) } 
+                onPlus={(obj) => onAddToCart(obj) } 
               />
             )
           )}
 
-          {items.reverse().map((item, i) => (
+          {/* {items.reverse().map((item, i) => (
               <Card 
                 title={item.name} 
                 price={item.price} 
                 imageUrl={item.imageUrl} 
                 onClickFavorite={() => console.log(`Click on heart. Add to favorite`) }
-                onClickPlus={() => console.log(`Click on Plus Button. Add to Cart`) } 
+                onPlus={() => onAddToCart } 
               />
             )
-          )}
+          )} */}
 
         </div>
 
