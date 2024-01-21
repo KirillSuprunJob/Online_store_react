@@ -9,7 +9,9 @@ function App() {
   
   const [cartOpened, setCartOpened]  = React.useState(false);
   const [cartItems, setCartItems] = React.useState([]);
+  const [searchValue, setSearchValue] = React.useState('');
   const [items, setItems] = React.useState([]);
+  // const [nameOrSearch, setNameOrSearch] = React.useState('All products');
 
 
 
@@ -27,6 +29,17 @@ function App() {
     }, []
   );
 
+// !! ????????????????????????????????????????????????????????????????????????
+  const onChangeSearchInput = (e) => {
+    // console.log(e.target.value);
+    // console.log('e.target.value.trim().length', e.target.value.trim().length)
+    setSearchValue(e.target.value.trim());
+    // e.target.value.trim().length > 0 ? setSearchValue(e.target.value.trim()) : setSearchValue('');
+
+    // searchValue.length ? setNameOrSearch(`Searching by ${searchValue}`) : setNameOrSearch(`All products`)
+  }; 
+// !! ????????????????????????????????????????????????????????????????????????
+  
   
 
   // const [] = React.useEffect()
@@ -52,11 +65,11 @@ function App() {
 
       <div className="content">
         <div className="content_top d-flex flex-row align-items-center justify-content-between"> 
-            <h1 > All products </h1>
+            <h1> {searchValue ? `Searching by: "${searchValue}"` : `All products`} </h1>
             <div className="search-block d-flex"> 
               <img src="/img/search.svg" alt="Search"/>
-              <input placeholder="Search... "
-                                              />
+              <input onInput={onChangeSearchInput} placeholder="Search... "/>
+              <img className="clear-search" width="32" height="32" src="/img/button_remove.svg" alt="remove"/>
           </div>
         </div>
           {/* ----------------- */}
@@ -68,6 +81,7 @@ function App() {
                 title={item.name} 
                 price={item.price} 
                 imageUrl={item.imageUrl} 
+                key={i}
                 onClickFavorite={() => console.log(`Click on heart. Add to favorite`) }
                 onPlus={(obj) => onAddToCart(obj) } 
               />
