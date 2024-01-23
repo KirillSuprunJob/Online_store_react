@@ -11,6 +11,7 @@ function App() {
   const [cartItems, setCartItems] = React.useState([]);
   const [searchValue, setSearchValue] = React.useState('');
   const [items, setItems] = React.useState([]);
+
   // const [nameOrSearch, setNameOrSearch] = React.useState('All products');
 
 
@@ -31,21 +32,17 @@ function App() {
 
 // !! ????????????????????????????????????????????????????????????????????????
   const onChangeSearchInput = (e) => {
+    setSearchValue(e.target.value.trimStart());
+
     // console.log(e.target.value);
     // console.log('e.target.value.trim().length', e.target.value.trim().length)
-    setSearchValue(e.target.value.trim());
     // e.target.value.trim().length > 0 ? setSearchValue(e.target.value.trim()) : setSearchValue('');
-
     // searchValue.length ? setNameOrSearch(`Searching by ${searchValue}`) : setNameOrSearch(`All products`)
   }; 
 // !! ????????????????????????????????????????????????????????????????????????
-  
-  
 
   // const [] = React.useEffect()
 
-
- 
   // const arr = [
   //   {name:  'Your gateway to limitless possibilities', price: 6999, imageUrl: '/img/products/1.jpg'}, 
   //   {name:  'Explore limitless storage possibilities now', price: 8311, imageUrl: '/img/products/2.jpg'},
@@ -64,24 +61,24 @@ function App() {
       <hr/>
 
       <div className="content">
-        <div className="content_top d-flex flex-row align-items-center justify-content-between"> 
+        <div className="content_top d-flex flex-row align-items-center justify-content-between flex-wrap"> 
             <h1> {searchValue ? `Searching by: "${searchValue}"` : `All products`} </h1>
             <div className="search-block d-flex"> 
               <img src="/img/search.svg" alt="Search"/>
-              <input onInput={onChangeSearchInput} placeholder="Search... "/>
-              <img className="clear-search" width="32" height="32" src="/img/button_remove.svg" alt="remove"/>
+              <input onInput={onChangeSearchInput} value={searchValue} placeholder="Search... "/>
+              {searchValue ? <img className="clear-search" onClick={() => {setSearchValue('')}} width="32" height="32" src="/img/button_remove.svg" alt="clear-search"/> : null}
           </div>
         </div>
           {/* ----------------- */}
 
-        <div className="products d-flex flex-wrap justify-content-between"> 
+        <div className="products"> 
 
-          {items.map((item, i) => (
+          {items.filter((item) => item.name.toLowerCase().includes(searchValue.toLowerCase())).map((item, i) => (
               <Card 
                 title={item.name} 
                 price={item.price} 
                 imageUrl={item.imageUrl} 
-                key={i}
+                key={item.name}
                 onClickFavorite={() => console.log(`Click on heart. Add to favorite`) }
                 onPlus={(obj) => onAddToCart(obj) } 
               />

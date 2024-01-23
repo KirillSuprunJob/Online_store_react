@@ -71,12 +71,20 @@ hr{
 }
 
 div.content{
+
+  
+  
   .content_top{
     margin-bottom: 40px;
     margin-right: 40px;
+    
     h1{
       
       margin-left: 40px;
+    }
+
+    .search-block{
+      margin-left: 30px;
     }
   }
 
@@ -84,6 +92,8 @@ div.content{
 
   .products{
     padding: 0 30px;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
