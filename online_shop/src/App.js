@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from './components/Card/Card.jsx';
 import Header from "./components/Header.jsx";
 import Drawer from "./components/Drawer.jsx";
+import axios from "axios";
 
 function App() {
   
@@ -17,38 +18,32 @@ function App() {
 
 
   const onAddToCart = (obj) => {
-    setCartItems(prev => [...prev, obj]);
-    console.log('obj',cartItems);
+      axios.post('https://659c316ad565feee2dac9ec0.mockapi.io/cart', obj)
+    
+      setCartItems(prev => [...prev, obj]);
+      console.log('obj',cartItems);
+
   };
 
 
-  React.useEffect(() => {
-      fetch('https://659c316ad565feee2dac9ec0.mockapi.io/items').then((res) => { 
-          return res.json()
+  React.useEffect(() => {   
+      axios.get('https://659c316ad565feee2dac9ec0.mockapi.io/items').then((res) => {
+        setItems(res.data);
         }
-      ).then(json => setItems(json))
-    }, []
+      );
+    },
+    []
   );
 
-// !! ????????????????????????????????????????????????????????????????????????
+
   const onChangeSearchInput = (e) => {
     setSearchValue(e.target.value.trimStart());
 
-    // console.log(e.target.value);
-    // console.log('e.target.value.trim().length', e.target.value.trim().length)
-    // e.target.value.trim().length > 0 ? setSearchValue(e.target.value.trim()) : setSearchValue('');
-    // searchValue.length ? setNameOrSearch(`Searching by ${searchValue}`) : setNameOrSearch(`All products`)
   }; 
-// !! ????????????????????????????????????????????????????????????????????????
 
-  // const [] = React.useEffect()
 
-  // const arr = [
-  //   {name:  'Your gateway to limitless possibilities', price: 6999, imageUrl: '/img/products/1.jpg'}, 
-  //   {name:  'Explore limitless storage possibilities now', price: 8311, imageUrl: '/img/products/2.jpg'},
-  //   {name:  'Unleash boundless storage innovation today', price: 12700, imageUrl: '/img/products/3.jpg'},
-  //   {name:  'Embark on limitless storage solutions', price: 3500, imageUrl: '/img/products/4.jpg'},
-  // ]
+
+
 
 // ?? ------------------------------------------------------------------
   return (
@@ -83,24 +78,13 @@ function App() {
                 onPlus={(obj) => onAddToCart(obj) } 
               />
             )
-          )}
-
-          {/* {items.reverse().map((item, i) => (
-              <Card 
-                title={item.name} 
-                price={item.price} 
-                imageUrl={item.imageUrl} 
-                onClickFavorite={() => console.log(`Click on heart. Add to favorite`) }
-                onPlus={() => onAddToCart } 
-              />
-            )
-          )} */}
+          )};
 
         </div>
 
       </div>
     </div>
   );
-}
+};
 
 export default App;
